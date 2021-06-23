@@ -4,22 +4,13 @@ local Module = require(Player.PlayerScripts.Shared.Client.CombatController)
 local Attack = Module.BasicAttack
 local Ability = Module.UseAbility
 local CanTouch = type(firetouchinterest) == "function"
-function start()
-while wait() do		
-local Event = game:GetService("ReplicatedStorage").Dungeon.Remotes.StartDungeon
-Event:FireServer()
-end
-end
-	for i,v in pairs(game.Players.LocalPlayer.Character.FighterVisuals:GetDescendants())do
-    if v.Name == "Hitbox" then 
-v.Size = Vector3.new(100,100,100)
-end
-end
+
+
         function attack()
             while wait() do
                     for _,v in pairs(game.Workspace:GetDescendants()) do     
 				     if v:FindFirstChild("HumanoidRootPart") ~= nil  then
-						if v:FindFirstChild("EvilHumanoid")  then
+						if v:FindFirstChild("TargetHumanoid")  then
 							local TweenService = game:GetService("TweenService")
                             local tweenInfo = TweenInfo.new(
 									1, -- Time
@@ -30,17 +21,16 @@ end
 									0 -- DelayTime
 								)
 
-            local tween = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = v.HumanoidRootPart.CFrame + Vector3.new(0,50,0)}) --CHarposition
+            local tween = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = v.Head.CFrame + Vector3.new(0,50,0)}) --CHarposition
             tween:Play()
-			--local pos = v.Head.Position
+			local pos = v.Head.Position
 
             repeat
              wait()
             
             game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-             Attack(Module)
-   
-              Ability(Module,v.HumanoidRootPart.Position)
+              Attack(Module)
+              Ability(Module,v.Head.Position)
 
 			until v.EvilHumanoid.Health == 0 
     
@@ -48,16 +38,17 @@ end
 end
 end
 
-               for _,v in pairs(game.Workspace:GetDescendants()) do     
-				if v:FindFirstChild("Head") ~= nil then 
-					if v:FindFirstChild("EvilHumanoid")  then
-				
+
+            --[[  for _,v in pairs(game.Workspace:GetDescendants()) do     
+				if v:FindFirstChild("HumanoidRootPart") ~= nil then 
+					if v:FindFirstChild("TargetHumanoid")  then
+				repeat
                 Attack(Module)
                 Ability(Module,v.HumanoidRootPart.Position)
-             
+                   until v.EvilHumanoid.Health == 0 
             end
 end
-end
+end]]
 end
 end 
         function heal()
@@ -92,8 +83,19 @@ end
 end
 end
 end
-        spawn(attack)
+function start()
+while wait() do		
+local Event = game:GetService("ReplicatedStorage").Dungeon.Remotes.StartDungeon
+Event:FireServer()
+	for i,v in pairs(game.Players.LocalPlayer.Character.FighterVisuals:GetDescendants())do
+    if v.Name == "Hitbox" then 
+v.Size = Vector3.new(100,100,100)
+end
+end
+end
+end   
         spawn(heal)
         spawn(start)
+        spawn(attack)
         
 	--game.Players.LocalPlayer.Character.HumanoidRootPart.Orientation = Vector3.new(10,10,10)
