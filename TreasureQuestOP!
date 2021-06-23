@@ -39,9 +39,9 @@ end
             
             game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
              Attack(Module)
-    pcall(function()
-              Ability(Module,EvilHumanoid.Position)
-end)
+   
+              Ability(Module,v.HumanoidRootPart.Position)
+
 			until v.EvilHumanoid.Health == 0 
     
     end
@@ -50,13 +50,13 @@ end
 end
 end
     function att2()
-		while wait(0.5) do
+		while wait() do
                for _,v in pairs(game.Workspace:GetDescendants()) do     
-				if v:FindFirstChild("HumanoidRootPart") ~= nil then 
+				if v:FindFirstChild("Head") ~= nil then 
 					if v:FindFirstChild("EvilHumanoid")  then
 				
                 Attack(Module)
-                Ability(Module)
+                Ability(Module,v.HumanoidRootPart.Position)
              
             end
 end
@@ -65,7 +65,7 @@ end
 end
         function heal()
             while wait(0.5) do 
-                if CanTouch then
+                --[[if CanTouch then
     Workspace:WaitForChild("Ignore").ChildAdded:Connect(function(A_1)
         if A_1.Name == "Medkit" and A_1:WaitForChild("TouchInterest",5) then
             repeat wait(0.2) until pcall(function() return Player.Character.Humanoid.Health < Player.Character.Humanoid.MaxHealth end)
@@ -87,7 +87,7 @@ end
             end
 end
 end
-wait(1)
+wait(1)]]
         for i,v in pairs(game:GetService("Workspace"):GetDescendants())do
             if v:IsA("Part") and v.Name == "Finish"then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
