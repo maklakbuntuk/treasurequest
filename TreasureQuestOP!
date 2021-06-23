@@ -1,3 +1,9 @@
+local Players = game:GetService("Players")
+local Player = Players.LocalPlayer
+local Module = require(Player.PlayerScripts.Shared.Client.CombatController)
+local Attack = Module.BasicAttack
+local Ability = Module.UseAbility
+local CanTouch = type(firetouchinterest) == "function"
 function start()
 while wait() do		
 local Event = game:GetService("ReplicatedStorage").Dungeon.Remotes.StartDungeon
