@@ -23,9 +23,9 @@ end
 							local TweenService = game:GetService("TweenService")
                             local tweenInfo = TweenInfo.new(
 									1, -- Time
-									Enum.EasingStyle.Linear, -- EasingStyle
+									Enum.EasingStyle.Back, -- EasingStyle
 									Enum.EasingDirection.Out, -- EasingDirection
-									0, -- RepeatCount (when less than zero tfhe tween will loop indefinitely)
+									1, -- RepeatCount (when less than zero tfhe tween will loop indefinitely)
 									false, -- Reverses (tween will reverse once reaching it's goal)
 									0 -- DelayTime
 								)
