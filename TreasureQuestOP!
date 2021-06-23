@@ -4,10 +4,8 @@ local Module = require(Player.PlayerScripts.Shared.Client.CombatController)
 local Attack = Module.BasicAttack
 local Ability = Module.UseAbility
 local CanTouch = type(firetouchinterest) == "function"
-
-
         function attack()
-            while wait() do
+            while wait(0.5) do
                     for _,v in pairs(game.Workspace:GetDescendants()) do     
 				     if v:FindFirstChild("HumanoidRootPart") ~= nil  then
 						if v:FindFirstChild("TargetHumanoid")  then
@@ -87,15 +85,20 @@ function start()
 while wait() do		
 local Event = game:GetService("ReplicatedStorage").Dungeon.Remotes.StartDungeon
 Event:FireServer()
-	for i,v in pairs(game.Players.LocalPlayer.Character.FighterVisuals:GetDescendants())do
+end
+end  
+function hit()
+while wait(0.5) do
+for i,v in pairs(game.Players.LocalPlayer.Character.FighterVisuals:GetDescendants())do
     if v.Name == "Hitbox" then 
-v.Size = Vector3.new(100,100,100)
+v.Size = Vector3.new(1000,1000,1000)
 end
 end
+end 
 end
-end   
         spawn(heal)
         spawn(start)
         spawn(attack)
+        spawn(hit)
         
 	--game.Players.LocalPlayer.Character.HumanoidRootPart.Orientation = Vector3.new(10,10,10)
