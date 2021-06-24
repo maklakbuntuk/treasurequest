@@ -23,7 +23,7 @@ function hit()
 while wait(0.5) do
 for i,v in pairs(game.Players.LocalPlayer.Character.FighterVisuals:GetDescendants())do
     if v.Name == "Hitbox" then 
-v.Size = Vector3.new(30,30,30)
+v.Size = Vector3.new(50,50,50)
 end
 end
 end 
