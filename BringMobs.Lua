@@ -43,7 +43,7 @@ end
 end
 end
 end
-function move()
+--[[function move()
 Local = game:GetService('Players').LocalPlayer
 Char  = Local.Character
 Local.CharacterAdded:connect(function(char)
@@ -60,7 +60,7 @@ box.Position = Vector3.new(0,10000,0)
 repeat wait() until Char
 loc = Char.HumanoidRootPart.Position
 Char:MoveTo(box.Position + Vector3.new(0, 0, 0))
-end
+end]]
 spawn(start)
 spawn(hit)
 spawn(attack)
