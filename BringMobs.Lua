@@ -8,7 +8,7 @@ function attack()
 for _,v in pairs(game.Workspace:GetDescendants()) do
  if v:FindFirstChild("EvilHumanoid") ~= nil then
   v:FindFirstChild("HumanoidRootPart").Anchored = true
-  v:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-2)--Legit Cfrane --1,1,-3.5
+  v:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-10)--Legit Cfrane --1,1,-3.5
 --v:FindFirstChild("Head").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,1,-1)--Legit Cfrane --1,1,-3.5
 
                game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
@@ -43,26 +43,13 @@ end
 end
 end
 end
---[[function move()
-Local = game:GetService('Players').LocalPlayer
-Char  = Local.Character
-Local.CharacterAdded:connect(function(char)
-        wait(.25)
-        loc = Char.HumanoidRootPart.Position
-        Char:MoveTo(box.Position + Vector3.new(0, 0, 0))
-    
-end)
-box = Instance.new('Part',workspace)
-box.Anchored = true
-box.CanCollide = true
-box.Size = Vector3.new(50,5,50)
-box.Position = Vector3.new(0,10000,0)
-repeat wait() until Char
-loc = Char.HumanoidRootPart.Position
-Char:MoveTo(box.Position + Vector3.new(0, 0, 0))
-end]]
+function move()
+while wait() do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-8.57033443, 61.8922386, -0.350189477, 0.972228646, 8.66576944e-09, -0.234033018, 8.70866546e-10, 1, 4.06457623e-08, 0.234033018, -3.97207849e-08, 0.972228646))
+end
+end
 spawn(start)
 spawn(hit)
 spawn(attack)
 spawn(heal)
---spawn(move)
+spawn(move)
