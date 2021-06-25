@@ -7,8 +7,8 @@ function attack()
             _G.on = true
 while wait(_G.on) do
 for _,v in pairs(game.Workspace:GetDescendants()) do
- if v:FindFirstChild("TargetHumanoid") ~= nil then
-  v:FindFirstChild("HumanoidRootPart").CanCollide = true
+ if v:FindFirstChild("EvilHumanoid") ~= nil then
+  --v:FindFirstChild("HumanoidRootPart").CanCollide = true
 v:FindFirstChild("HumanoidRootPart").Anchored = true
   v:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-10)--Legit Cfrane --1,1,-3.5
 --v:FindFirstChild("Head").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,1,-1)--Legit Cfrane --1,1,-3.5
