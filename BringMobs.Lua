@@ -4,7 +4,7 @@ local Module = require(Player3.PlayerScripts.Shared.Client.CombatController)
 local Attack = Module.BasicAttack
 local Ability = Module.UseAbility
 function attack()
-            while wait() do
+            while wait(3) do
 for _,v in pairs(game.Workspace:GetDescendants()) do
  if v:FindFirstChild("EvilHumanoid") ~= nil then
   v:FindFirstChild("HumanoidRootPart").CanCollide = true
