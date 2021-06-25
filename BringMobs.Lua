@@ -11,7 +11,9 @@ for _,v in pairs(game.Workspace:GetDescendants()) do
 v:FindFirstChild("HumanoidRootPart").Anchored = true
   v:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-10)--Legit Cfrane --1,1,-3.5
 --v:FindFirstChild("Head").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,1,-1)--Legit Cfrane --1,1,-3.5
-
+               
+               
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-2.32776427, 100.6644421, 3.105334178))
                game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
               Attack(Module)
               Ability(Module,Vector3)
@@ -45,9 +47,7 @@ end
 end
 end
 function move()
-while wait() do
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-8.57033443, 61.8922386, -0.350189477, 0.972228646, 8.66576944e-09, -0.234033018, 8.70866546e-10, 1, 4.06457623e-08, 0.234033018, -3.97207849e-08, 0.972228646))
-end
+
 end
 spawn(start)
 spawn(hit)
