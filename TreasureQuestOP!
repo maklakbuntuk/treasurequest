@@ -28,7 +28,7 @@ local CanTouch = type(firetouchinterest) == "function"
             
             game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
               Attack(Module)
-              Ability(Module,v.Head.Position)
+              Ability(Module,Vector3)
 
 			until v.EvilHumanoid.Health == 0 
     
