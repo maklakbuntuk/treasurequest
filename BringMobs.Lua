@@ -6,6 +6,7 @@ local Ability = Module.UseAbility
 function attack()
             _G.on = true
 while wait(_G.on) do
+		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 for _,v in pairs(game.Workspace:GetDescendants()) do
  if v:FindFirstChild("EvilHumanoid") ~= nil then
   --v:FindFirstChild("HumanoidRootPart").CanCollide = true
