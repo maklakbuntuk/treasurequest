@@ -10,7 +10,7 @@ for _,v in pairs(game.Workspace:GetDescendants()) do
  if v:FindFirstChild("TargetHumanoid") ~= nil then
   v:FindFirstChild("HumanoidRootPart").CanCollide = true
 v:FindFirstChild("HumanoidRootPart").Anchored = true
-  v:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-15)--Legit Cfrane --1,1,-3.5
+  v:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-10)--Legit Cfrane --1,1,-3.5
 --v:FindFirstChild("Head").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,1,-1)--Legit Cfrane --1,1,-3.5
                
                
@@ -31,7 +31,7 @@ function hit()
 while wait(0.5) do
 for i,v in pairs(game.Players.LocalPlayer.Character.FighterVisuals:GetDescendants())do
     if v.Name == "Hitbox" then 
-v.Size = Vector3.new(30,10,30)
+v.Size = Vector3.new(50,50,50)
 end
 end
 end
