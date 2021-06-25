@@ -9,19 +9,18 @@ for _,v in pairs(game.Workspace:GetDescendants()) do
  if v:FindFirstChild("EvilHumanoid") ~= nil then
   --v:FindFirstChild("HumanoidRootPart").CanCollide = true
 v:FindFirstChild("HumanoidRootPart").Anchored = true
-  v:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-11)--Legit Cfrane --1,1,-3.5
+  v:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-15)--Legit Cfrane --1,1,-3.5
 --v:FindFirstChild("Head").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,1,-1)--Legit Cfrane --1,1,-3.5
                
                
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-2.32776427, 100.6644421, 3.105334178))
-              repeat
-             wait()
+              
             
             game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
               Attack(Module)
               Ability(Module,Vector3)
 
-			until v.EvilHumanoid.Health == 0 
+			
 
 end
 end
