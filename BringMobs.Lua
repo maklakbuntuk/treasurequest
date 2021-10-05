@@ -32,7 +32,7 @@ function hit()
 while wait(0.5) do
 for i,v in pairs(game.workspace:GetDescendants())do
     if v.Name == "EvilHumanoid" then 
-v.RootPart.Size = Vector3.new(1000,1000,1000)
+v.RootPart.Size = Vector3.new(500,500,500)
 end
 end
 end
