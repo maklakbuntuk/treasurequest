@@ -5,24 +5,23 @@ local Attack = Module.BasicAttack
 local Ability = Module.UseAbility
 function attack()
             _G.on = true
-while wait(_G.on) do
-		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+while wait() do
 for _,v in pairs(game.Workspace:GetDescendants()) do
- if v:FindFirstChild("TargetHumanoid") ~= nil then
-  --v:FindFirstChild("HumanoidRootPart").CanCollide = true
-v:FindFirstChild("HumanoidRootPart").Anchored = true
-  v:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-7)--Legit Cfrane --1,1,-3.5
---v:FindFirstChild("Head").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,1,-1)--Legit Cfrane --1,1,-3.5
-               
-               
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-2.32776427, 100.6644421, 3.105334178))
-              
-            
-            game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-              Attack(Module)
-              Ability(Module,Vector3)
+ if v:FindFirstChild("EvilHumanoid") ~= nil then
+  v:FindFirstChild("HumanoidRootPart").Anchored = true
+if (v.EvilHumanoid.Health > 0) then
+    v.EvilHumanoid.RootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,1,-1)
 
-			
+ -- v:FindFirstChild("EvilHumanoid").RootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,1,-1)--Legit Cfrane --1,1,-3.5
+--v:FindFirstChild("Head").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,1,-1)--Legit Cfrane --1,1,-3.5
+ 
+               game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+              --Attack(Module)
+              Ability(Module)
+
+if (v.EvilHumanoid.Health == 0) then
+               v:Destroy()
+           end
 
 end
 end
