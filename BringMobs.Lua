@@ -4,8 +4,8 @@ local Module = require(Player3.PlayerScripts.Shared.Client.CombatController)
 local Attack = Module.BasicAttack
 local Ability = Module.UseAbility
 function attack()
-            _G.on = true
-while wait(_G.on) do
+            
+while wait() do
 for _,v in pairs(game.Workspace:GetDescendants()) do
  if v:FindFirstChild("EvilHumanoid") ~= nil then
   v:FindFirstChild("HumanoidRootPart").Anchored = true
@@ -27,6 +27,7 @@ end
 end
 end
 end
+end
 function hit()
 while wait(0.5) do
 for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants())do
@@ -42,12 +43,13 @@ local Event = game:GetService("ReplicatedStorage").Dungeon.Remotes.StartDungeon
 Event:FireServer()
 end
 end  
+
+
  function heal()
             while wait() do 
  for i,v in pairs(game:GetService("Workspace"):GetDescendants())do
             if v:IsA("Part") and v.Name == "Finish"then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-end
 end
 end
 end
