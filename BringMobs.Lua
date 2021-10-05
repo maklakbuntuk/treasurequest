@@ -5,7 +5,7 @@ local Attack = Module.BasicAttack
 local Ability = Module.UseAbility
 function attack()
             _G.on = true
-while wait(_G.on) do
+while wait() do
 for _,v in pairs(game.Workspace:GetDescendants()) do
  if v:FindFirstChild("EvilHumanoid") ~= nil then
   v:FindFirstChild("HumanoidRootPart").Anchored = true
@@ -51,8 +51,6 @@ end
 end
 end
 end
-function move()
-
 end
 spawn(start)
 spawn(hit)
