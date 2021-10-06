@@ -8,16 +8,16 @@ function attack()
 while wait() do
 for _,v in pairs(game.Workspace:GetDescendants()) do
  if v:FindFirstChild("EvilHumanoid") ~= nil then
-  v:FindFirstChild("HumanoidRootPart").Anchored = true
+  v:FindFirstChild("EvilHumanoid").Anchored = true
 if (v.EvilHumanoid.Health > 0) then
-    v.EvilHumanoid.RootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,1,-1)
+    v.EvilHumanoid.RootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,1,-2.5)
 
  -- v:FindFirstChild("EvilHumanoid").RootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,1,-1)--Legit Cfrane --1,1,-3.5
 --v:FindFirstChild("Head").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,1,-1)--Legit Cfrane --1,1,-3.5
  
                game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
               --Attack(Module)
-              Ability(Module)
+              Ability(Module,Vector3.new(1,1,-3))
 
 if (v.EvilHumanoid.Health == 0) then
                v:Destroy()
