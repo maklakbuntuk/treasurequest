@@ -10,7 +10,7 @@ function attack()
 while wait() do
 for _,v in pairs(game.Workspace:GetDescendants()) do
  if v:FindFirstChild("EvilHumanoid") ~= nil then
-  v:FindFirstChild("EvilHumanoid").Anchored = true
+  v:FindFirstChild("EvilHumanoid").RootPart.Anchored = true
 if (v.EvilHumanoid.Health > 0) then
     v.EvilHumanoid.RootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,1,-2.5)
 
