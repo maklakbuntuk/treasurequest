@@ -4,6 +4,23 @@ local Module = require(Player3.PlayerScripts.Shared.Client.CombatController)
 local Attack = Module.BasicAttack
 local Ability = Module.UseAbility
 
+noclip = true 
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+
+if key == "true" then
+noclip = not noclip
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+
+
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1,100,-2.3)
 function attack()
             
