@@ -3,6 +3,8 @@ local Player3 = Players2.LocalPlayer
 local Module = require(Player3.PlayerScripts.Shared.Client.CombatController)
 local Attack = Module.BasicAttack
 local Ability = Module.UseAbility
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1,100,-2.3)
 function attack()
             
 while wait() do
