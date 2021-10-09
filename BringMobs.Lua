@@ -90,11 +90,10 @@ end
 end
 end
 function hit()
-while wait(0.5) do
+
 for i,v in pairs(game.workspace:GetDescendants())do
     if v.Name == "EvilHumanoid" then 
-v.RootPart.Size = Vector3.new(500,500,500)
-end
+v.RootPart.Size = Vector3.new(250,250,250)
 end
 end
 end
@@ -104,8 +103,6 @@ local Event = game:GetService("ReplicatedStorage").Dungeon.Remotes.StartDungeon
 Event:FireServer()
 end
 end  
-
-
  function heal()
             while wait() do 
  for i,v in pairs(game:GetService("Workspace"):GetDescendants())do
