@@ -58,7 +58,7 @@ noclip = not noclip
 game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
 end
 end)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1,100,-3)
+--game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1,100,-3)
 
 function attack()
             
