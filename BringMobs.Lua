@@ -3,7 +3,7 @@ local Player3 = Players2.LocalPlayer
 local Module = require(Player3.PlayerScripts.Shared.Client.CombatController)
 local Attack = Module.BasicAttack
 local Ability = Module.UseAbility
-function fps()
+--[[function fps()
 local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
 local g = game
 local w = g.Workspace
@@ -41,7 +41,7 @@ for i, e in pairs(l:GetChildren()) do
         e.Enabled = false
     end
 end
-    end
+    end]]
 
 noclip = true 
 game:GetService('RunService').Stepped:connect(function()
@@ -71,7 +71,7 @@ if (v.EvilHumanoid.Health > 0) then
 
     v.EvilHumanoid.RootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,1,-3)
 
-  v:FindFirstChild("EvilHumanoid").RootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,1,-3)--Legit Cfrane --1,1,-3.5
+ -- v:FindFirstChild("EvilHumanoid").RootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,1,-3)--Legit Cfrane --1,1,-3.5
 --v:FindFirstChild("Head").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,1,-1)--Legit Cfrane --1,1,-3.5
 
               -- game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
@@ -119,4 +119,4 @@ spawn(start)
 spawn(hit)
 spawn(attack)
 spawn(heal)
-spawn(fps)
+--spawn(fps)
