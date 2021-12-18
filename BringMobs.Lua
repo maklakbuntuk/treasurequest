@@ -78,6 +78,22 @@ end
 end
 end
 end
+ function coins()
+            while wait() do
+                          if CanTouch then
+        local Chests = Workspace:GetDescendants()
+        for _ = 1, #Chests do local Chest = Chests[_]
+            if Chest.Name == "Chest" and Chest:FindFirstChild("Hitbox") and Chest.Hitbox:FindFirstChild("TouchInterest") then
+                pcall(function()
+                    firetouchinterest(Player3.Character.HumanoidRootPart,Chest.Hitbox,0)
+                    firetouchinterest(Player3.Character.HumanoidRootPart,Chest.Hitbox,1)
+                end)
+            end
+end
+end    
+                        end
+            end
+spawn (coins)
 spawn(start)
 spawn(hit)
 spawn(attack)
