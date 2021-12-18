@@ -57,20 +57,7 @@ while wait() do
 for i,v in pairs(game.workspace:GetDescendants())do
     if v.Name == "EvilHumanoid" then 
 v.RootPart.Size = Vector3.new(250,250,250)
-                
-            if CanTouch then
-        local Chests = Workspace:GetDescendants()
-        for _ = 1, #Chests do local Chest = Chests[_]
-            if Chest.Name == "Chest" and Chest:FindFirstChild("Hitbox") and Chest.Hitbox:FindFirstChild("TouchInterest") then
-                pcall(function()
-                    firetouchinterest(Player3.Character.HumanoidRootPart,Chest.Hitbox,0)
-                    firetouchinterest(Player3.Character.HumanoidRootPart,Chest.Hitbox,1)
-                end)
-            end
-end
-end    
-                
-                
+                     
                
 end
 end
